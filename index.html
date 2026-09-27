@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pimenta Secreta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/ChatGPT Image 25 de set. de 2026, 12_24_27.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="header-content">
+            <img src="img/ChatGPT Image 25 de set. de 2026, 12_24_27.png" alt="Logo RZ ART CNC" class="logo">
+
+            <h1 class="text">PIMENTA SECRETA</h1>
+
+            <p class="text endereco-loja">
+                Rua José De Moliner, Siderópolis
+            </p>
+
+            <div class="hora">
+                <span>Seg à Sex - 08:00 - 18:00</span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- HERO / APRESENTAÇÃO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Seu desejo, do seu jeito</h2>
+            <p>
+                Uma seleção especial de produtos para transformar a rotina, explorar novas sensações e tornar cada momento inesquecível.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- TÍTULO CATÁLOGO -->
+    <section class="titulo">
+        <h2>Nosso Mostruário</h2>
+        <p>Escolha seus produtos favoritos e finalize pelo WhatsApp</p>
+    </section>
+
+
+    <!-- CATÁLOGO -->
+    <section id="tabua" class="produtos">
+    <article class="produto-card">
+            <img src="img/calcinha.jpg" alt="calcinha">
+
+            <div class="info">
+                <p class="nome">Calcinhas</p>
+
+                <p class="descricao">
+                    ...
+                </p>
+
+                <div class="item">
+                    <p class="preco">R$ 150,00</p>
+
+                    <button class="add-bt"
+                        data-name="calcinha"
+                        data-price="150">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- PRODUTO -->
+        <article class="produto-card">
+            <img src="img/moto club.jpg" alt="Tábua Moto Club">
+
+            <div class="info">
+                <p class="nome">Tábua Moto Club</p>
+
+                <p class="descricao">
+                    50x30cm • Madeira Garapeira • Gravação personalizada.
+                </p>
+
+                <div class="item">
+                    <p class="preco">R$ 155,00</p>
+
+                    <button class="add-bt"
+                        data-name="Tábua Moto Club"
+                        data-price="155">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- PRODUTO -->
+        <article class="produto-card">
+            <img src="img/nss senhora.jpg" alt="Tábua Nossa Senhora">
+
+            <div class="info">
+                <p class="nome">Tábua Nossa Senhora</p>
+
+                <p class="descricao">
+                    Modelo decorativo premium para presente ou coleção.
+                </p>
+
+                <div class="item">
+                    <p class="preco">R$ 240,00</p>
+
+                    <button class="add-bt"
+                        data-name="Tábua Nossa Senhora"
+                        data-price="240">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- MODAL CARRINHO -->
+    <div class="modal" id="cart-modal">
+
+        <div class="mod">
+
+            <h2>Meu Carrinho</h2>
+
+            <div id="cart-items" class="cart-list"></div>
+
+            <div class="resumo">
+                <p>
+                    Total:
+                    <strong>R$ <span id="cart-total">0,00</span></strong>
+                </p>
+
+                <label for="cart-endre">Endereço de entrega:</label>
+                <input
+                    type="text"
+                    placeholder="Digite seu endereço"
+                    id="cart-endre"
+                    class="ende"
+                >
+
+                <label for="payment-method">Forma de pagamento:</label>
+                <select id="payment-method" class="payment-select">
+                    <option value="">Selecione</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Dinheiro (precisa troco)">Dinheiro (precisa troco)</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                </select>
+                <p>Personalização:</p>
+
+                        <label class="custom-option">
+                    <input type="checkbox" id="customization">
+                    Quero personalizar (+ R$ 25,00)
+                </label>
+            </div>
+
+            <div class="footer-modal">
+                <button id="close" class="fechar">Fechar</button>
+                <button id="next" class="fim">Finalizar Pedido</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- BOTÃO CARRINHO -->
+    <button class="carrinho" id="cart-Btn">
+        (<span id="cart-count">0</span>)
+        Carrinho
+        <i class="fa fa-cart-plus"></i>
+    </button>
+
+
+    <!-- FOOTER -->
+    <footer class="rodape">
+        <p>© PIMENTA SECRETA — Todos os direitos reservados</p>
+    </footer>
+
+
+    <!-- SCRIPT -->
+    <script src="scripit.js"></script>
+    
+</body>
+</html>
